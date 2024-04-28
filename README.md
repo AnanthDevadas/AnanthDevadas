@@ -5,8 +5,26 @@ Purpose: The purpose of this app is to explore potential research topics one cou
 Demo: Give the link to your video demo. Read the video demo section below to understand what contents are expected in your demo.
 
 Installation: Data is all the same. 
+Create Table university_publication ( 
+	Primary Key (university_id,publication_id)
+    )
+Engine =InnoDB 
+select  u.id as university_id, p.id as publication_id, u.name as University, p.title as Journal, p.num_citations
+from faculty F
+    join university u
+		on u.id = F.university_id
+	join faculty_publication fp
+		on F.id = fp.faculty_id
+	join publication p
+		on p.id = fp.publication_id
+group by  u.id,p.id,u.name , p.title;
 
-Additional tables to instal by running the below SQL commands:
+ALTER TABLE university_publication
+ADD CONSTRAINT fk_uni_id FOREIGN KEY (university_id) REFERENCES university(id);
+
+ALTER TABLE university_publication
+ADD CONSTRAINT fk_pub_id FOREIGN KEY (publication_id) REFERENCES publication(id);
+
 -- Necessary to store favorite key words. Constraints make sure that it only adds keywords that bring back results
 Create table favorite_keywords (
 id INT NOT NULL auto_increment,
