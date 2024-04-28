@@ -3,7 +3,7 @@ Title: Keyword Exporer
 Purpose: The purpose of this app is to explore potential research topics one could do. The ideal example would probably be someone who might want to explore possible ideas thinging about pursuing a Research topic with an institue like a PHD student.
 
 Demo: Give the link to your video demo. Read the video demo section below to understand what contents are expected in your demo.
-https://mediaspace.illinois.edu/media/t/1_cl0d578l
+https://mediaspace.illinois.edu/media/t/1_797x48of
 
 Installation: Data is all the same. 
 Create Table university_publication ( 
